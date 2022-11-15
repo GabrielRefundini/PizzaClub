@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  font-family: Space Grotesk;
+  background-color: #1e1f31;
+  overflow-x: hidden;
+}
+header {
+  padding: 50px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 40px;
+  border-radius: 1px;
+  padding: 10px;
+  background: linear-gradient(135deg, #ffd539, #491f8f);
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+nav {
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+}
+nav a {
+  text-decoration: none;
+  color: #777;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 26px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+nav ul li::after {
+  content: "";
+  background: #491f8f;
+  width: 80%;
+  height: 100%;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+nav ul li a:hover {
+  color: white;
+}
+.container {
+  margin: 0 auto;
+  background: linear-gradient(135deg, #d41e31, #491f8f);
+  width: 80%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.discord {
+  background-color: #38322e;
+  border-radius: 65px;
+  bottom: 14px;
+  box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, 0.75);
+  color: #d41e31;
+  cursor: pointer;
+  height: 120px;
+  position: fixed;
+  right: 22px;
+  width: 120px;
+  z-index: 3;
+  background-image: url("https://img.icons8.com/color/480/discord-logo.png");
+  background-size: 120px 120px;
+  background-position: center;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  display: flex-start;
+  align-items: center;
+  border-radius: 20px;
+}
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+.card:hover img {
+  left: 80%;
+  height: 500px;
+}
+.card .content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 10px 20px 20px 40px;
+  visibility: hidden;
+  /* transition: 0.5s; */
+}
+.card:hover .content {
+  opacity: 1;
+  visibility: visible;
+  left: 0%;
+}
+.card .content h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+.card .content p {
+  color: #fff;
+}
+.card .content a {
+  position: relative;
+  display: inline-block;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #fff;
+  margin-top: 25px;
+  text-decoration: none;
+}
+.footer {
+  margin: auto;
+}
+.noticias {
+  padding: 100px;
+}
+.titulo {
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #777;
+}
+.conteudo {
+  padding: 10px;
+  color: white;
+}
